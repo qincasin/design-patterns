@@ -13,6 +13,7 @@
         <module>facade</module>
         <module>iterator</module>
         <module>principle</module>
+        <module>factory-method</module>
     </modules>
 
     <dependencies>
