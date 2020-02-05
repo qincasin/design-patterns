@@ -13,4 +13,16 @@ public class Client {
         pythonFactory.createNote().edit();
         pythonFactory.createVideo().record();
     }
+    abstract class A{
+        abstract void test();
+          void test2() throws ClassNotFoundException {
+                String a = "";
+              if (a == null) {
+                  Class<?> aClass = Class.forName("com.apple.concurrent");
+                  System.out.println(aClass);
+
+
+              }
+        }
+    }
 }
