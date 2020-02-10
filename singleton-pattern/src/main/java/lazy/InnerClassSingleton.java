@@ -1,17 +1,23 @@
 package lazy;
 
-import java.util.concurrent.*;
+import annotations.ThreadSafe;
 
 /**
  * Created by qincasin on 2020/2/6.
  */
 //这种形式兼顾饿汉式单例模式的内存浪费问题和synchronized的性能问题
 //完美规避了这两个缺点
+@ThreadSafe
 public class InnerClassSingleton {
     /**
      * 默认出现初始化内部内，如果没有使用则内部类是不加载的
      */
+
+    //防止反射破坏单例
     private InnerClassSingleton() {
+        if (LazyHolder.LAZY != null) {
+            throw new RuntimeException("不允许创建多个实例!");
+        }
 
     }
 
@@ -40,15 +46,15 @@ public class InnerClassSingleton {
 //        singleThreadPool.execute(()-> System.out.println(Thread.currentThread().getName()));
 //        singleThreadPool.shutdown();
 
-            new Thread(()->{
-                InnerClassSingleton instance = getInstance();
-                System.out.println(instance);
-            }).start();
+        new Thread(() -> {
+            InnerClassSingleton instance = getInstance();
+            System.out.println(instance);
+        }).start();
 
-            new Thread(()->{
-                InnerClassSingleton instance = getInstance();
-                System.out.println(instance);
-            }).start();
+        new Thread(() -> {
+            InnerClassSingleton instance = getInstance();
+            System.out.println(instance);
+        }).start();
     }
 
 }
