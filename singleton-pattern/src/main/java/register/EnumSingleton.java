@@ -50,6 +50,8 @@ public enum EnumSingleton {
         instance1 = (EnumSingleton) objectInputStream.readObject();
         fileInputStream.close();
 
+        System.out.println("test1111");
+
         System.out.println(instance1.getData());
         System.out.println(instance2.getData());
         System.out.println(instance1 == instance2);
