@@ -8,6 +8,10 @@
     <artifactId>design-patterns</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <lombok.version>1.18.8</lombok.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
     <modules>
         <module>observer</module>
         <module>facade</module>
@@ -16,15 +20,32 @@
         <module>factory-method</module>
         <module>abstract-factory</module>
         <module>singleton-pattern</module>
+        <module>callback</module>
     </modules>
 
+
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+        <!-- <scope>test</scope> -->
+
+
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-            <scope>provided</scope>
+            <version>${lombok.version}</version>
+            <!--            <scope>provided</scope>-->
         </dependency>
 
     </dependencies>
