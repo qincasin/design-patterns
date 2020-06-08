@@ -30,6 +30,11 @@ Use Data Bus pattern when
 
 ![Class diagram](.README_images/retry.png)
 
+## Event Driven Architecture
+
+![Class diagram](.README_images/event-driven-architechure.png)
+
+
 
 
 
