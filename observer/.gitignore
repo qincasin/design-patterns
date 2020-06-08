@@ -5,4 +5,5 @@ target
 *.iml
 *.class
 
-*/target/
+/target/
+

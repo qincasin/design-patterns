@@ -51,6 +51,7 @@ public class App {
                 new FindCustomer("123", new CustomerNotFoundException("not find")),
                 6,
                 3000L,
+                //class1.isAssignableFrom(class2)   class2是不是class1的子类或者子接口
                 e -> CustomerNotFoundException.class.isAssignableFrom(e.getClass())
         );
         op = retry;
