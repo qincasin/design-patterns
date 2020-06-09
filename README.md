@@ -34,6 +34,9 @@ Use Data Bus pattern when
 
 ![Class diagram](.README_images/event-driven-architechure.png)
 
+## balking
+
+![balking](.README_images/balking.png)
 
 
 
