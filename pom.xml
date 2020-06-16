@@ -32,6 +32,7 @@
         <module>pipeline</module>
         <module>abstract-document</module>
         <module>retry</module>
+        <module>half-sync-half-async</module>
     </modules>
 
 
@@ -117,6 +118,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M3</version>
                     <configuration>
+                        <!--suppress UnresolvedMavenProperty -->
                         <argLine>-Xmx1024M ${argLine}</argLine>
                     </configuration>
                 </plugin>

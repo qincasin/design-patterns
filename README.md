@@ -41,6 +41,9 @@ Use Data Bus pattern when
 ## commander
 ![commander](.README_images/commander.png)
 
+## half-sync-half-async
+![half-sync-half-async](.README_images/half-sync-half-async.png)
+
 
 
 
