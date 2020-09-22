@@ -35,6 +35,7 @@
         <module>half-sync-half-async</module>
         <module>delegate</module>
         <module>strategy</module>
+        <module>template-method</module>
     </modules>
 
 
