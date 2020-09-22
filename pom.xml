@@ -33,6 +33,8 @@
         <module>abstract-document</module>
         <module>retry</module>
         <module>half-sync-half-async</module>
+        <module>delegate</module>
+        <module>strategy</module>
     </modules>
 
 
