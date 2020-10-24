@@ -36,6 +36,7 @@
         <module>delegate</module>
         <module>strategy</module>
         <module>template-method</module>
+        <module>adatpter</module>
     </modules>
 
 
