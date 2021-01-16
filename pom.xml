@@ -14,6 +14,7 @@
         <spring-boot.version>2.0.9.RELEASE</spring-boot.version>
         <lombok.version>1.18.8</lombok.version>
         <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
         <junit.version>4.12</junit.version>
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <junit-vintage.version>${junit.version}.2</junit-vintage.version>
@@ -37,6 +38,7 @@
         <module>strategy</module>
         <module>template-method</module>
         <module>adatpter</module>
+        <module>bridging</module>
     </modules>
 
 
@@ -50,7 +52,13 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
         <!-- <scope>test</scope> -->
