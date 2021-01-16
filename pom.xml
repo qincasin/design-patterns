@@ -20,6 +20,7 @@
         <junit-vintage.version>${junit.version}.2</junit-vintage.version>
         <sping-test-junit5.version>1.0.2</sping-test-junit5.version>
         <jackson.version>2.10.3</jackson.version>
+        <fastjson.version>1.2.62</fastjson.version>
     </properties>
     <modules>
         <module>observer</module>
@@ -107,6 +108,13 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
 
 
