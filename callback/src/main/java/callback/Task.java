@@ -20,5 +20,11 @@ public abstract class Task {
         Optional.ofNullable(callback).ifPresent(Callback::call);
     }
 
+    final void executeWith2(final Callback2 callback,String b) {
+        execute();
+        callback.call(b);
+    }
+
+
     public abstract void execute();
 }

@@ -19,10 +19,10 @@ public class App {
 
     }
     public static void main(String[] args) {
-        var task = new SimpleTask();
+        Task task = new SimpleTask();
         long a = 1L;
-        task.executeWith(()->{
-        });
+        task.executeWith(TestCall::new);
+
 
         task.execute();
 
