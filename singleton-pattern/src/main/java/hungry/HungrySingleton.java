@@ -18,4 +18,8 @@ public class HungrySingleton {
     public static HungrySingleton getInstance() {
         return HUNGRY_SINGLETON;
     }
+
+    public static void main(String[] args) {
+        System.out.println(1%8);
+    }
 }

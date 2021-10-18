@@ -1,0 +1,39 @@
+@startuml
+package cn.dotfashion.soa.upmsadmin.service.arc {
+  class ArcCheckExecutorImpl {
+    - strategy : ArcCheckStrategy
+    + ArcCheckExecutorImpl(strategy : ArcCheckStrategy)
+    + consumeArcNotice(ArcCheckReqDTO : arcCheckReqDTO,Integer: chekStrategy)
+  }
+  interface ArcCheckStrategy {
+    + executeAble() {abstract}
+    + execute() {abstract}
+    + getRuleId() {abstract}
+  }
+  class ArcRuleCheckStrategy {
+    - LOGGER : Logger {static}
+    + executeAble()
+    + execute()
+    + getRuleId()
+  }
+  class ArcBrandCheckStrategy {
+    - LOGGER : Logger {static}
+    + executeAble()
+    + execute()
+    + getRuleId()
+  }
+  class ArcBudgetCheckStrategy {
+    - LOGGER : Logger {static}
+    + executeAble()
+    + execute()
+    + getRuleId()
+  }
+}
+ArcCheckExecutorImpl *-->  "-strategy" ArcCheckStrategy
+ArcRuleCheckStrategy ..|> ArcCheckStrategy
+ArcBrandCheckStrategy ..|> ArcCheckStrategy
+ArcBudgetCheckStrategy ..|> ArcCheckStrategy
+@enduml
+
+
+

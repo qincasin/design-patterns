@@ -1,0 +1,39 @@
+@startuml
+package cn.dotfashion.soa.upmsadmin.service.arc {
+  class ArcCalExecutorImpl {
+    - strategy : ArcCalStrategy
+    + ArcCalExecutorImpl(strategy : ArcCalStrategy)
+    + consumeArcNotice(arcNoticeReqDTO : ArcNoticeReqDTO)
+  }
+  interface ArcCalStrategy {
+    + executeAble() {abstract}
+    + execute() {abstract}
+    + getRuleId() {abstract}
+  }
+  class ArcRuleCalStrategy {
+    - LOGGER : Logger {static}
+    + executeAble()
+    + execute()
+    + getRuleId()
+  }
+  class ArcBrandCalStrategy {
+    - LOGGER : Logger {static}
+    + executeAble()
+    + execute()
+    + getRuleId()
+  }
+  class ArcBudgetCalStrategy {
+    - LOGGER : Logger {static}
+    + executeAble()
+    + execute()
+    + getRuleId()
+  }
+}
+ArcCalExecutorImpl *-->  "-strategy" ArcCalStrategy
+ArcRuleCalStrategy ..|> ArcCalStrategy
+ArcBrandCalStrategy ..|> ArcCalStrategy
+ArcBudgetCalStrategy ..|> ArcCalStrategy
+@enduml
+
+
+

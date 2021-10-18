@@ -14,6 +14,7 @@ public class EventDispatcher  {
     Map<Class<? extends Event>, Handle<? extends Event>> handleMap;
 
     public EventDispatcher() {
+
         handleMap = new HashMap<>();
     }
 
